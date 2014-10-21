@@ -1,0 +1,39 @@
+[
+  {
+    "media-query": {
+      "max-width": 320,
+      "min-device-pixel-ratio": 1
+    },
+    "extensions": [
+      "png", "jpg"
+    ],
+    "suffix": "-320"
+  }, {
+    "media-query": {
+      "max-width": 640,
+      "min-device-pixel-ratio": 1
+    },
+    "extensions": [
+      "png", "jpg"
+    ],
+    "suffix": "-640"
+  }, {
+    "media-query": {
+      "max-width": 900,
+      "min-device-pixel-ratio": 1
+    },
+    "extensions": [
+      "png", "jpg"
+    ],
+    "suffix": "-900"
+  }, {
+    "media-query": {
+      "min-width": 900,
+      "min-device-pixel-ratio": 2
+    },
+    "extensions": [
+      "png", "jpg"
+    ],
+    "suffix": "-900"
+  }
+]

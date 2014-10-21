@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>PortableCache</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="styles/main.css">
+    <script src="scripts/main.js"></script>
+    <style type="text/css">
+      .profile {
+        border-radius: 30px 30px;
+        width: 60px;
+        height: 60px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="well">
+        <h1>Responsive Resource Loader</h1>
+        <p>No more hassle with <code>&lt;picture&gt;</code> and <code>img[srcset]</code>.</p>
+        <ul>
+          <li>Using huge images is redundant for mobile devices.</li>
+          <li>Assigning <code>srcset</code> or <code>picture</code> for every single <code>img</code> tag is a P.I.T.A.</li>
+          <li>Loading images with relevant size for the device is a pain.</li>
+        </ul>
+        <p>Get responsive images for free by just writing single manifest file that defines naming formula.</p>
+        <a href="http://github.com/agektmr/responsive-resource-loader" target="_blank" class="btn btn-primary">View on Github</a>
+      </div>
+
+      <h2>Examples</h2>
+      <img src="images/responsive/illustration-home-inverted.png" class="img-responsive">
+      <p>Yeoman.</p>
+      <img src="images/responsive/abstract1.jpg" class="img-responsive">
+      <p>Photo by <a href="http://www.flickr.com/photos/jimnix/4971254545/">Jim Nix / Nomadic</a></p>
+      <img src="images/responsive/abstract2.jpg" class="img-responsive" >
+      <p>Photo by <a href="http://www.flickr.com/photos/zen/9990061573/">zen</a></p>
+      <img src="images/responsive/abstract3.jpg" class="img-responsive" >
+      <p>Photo by <a href="http://www.flickr.com/photos/cobalt/513184722/">cobalt123</a></p>
+      <h2>Write a manifest</h2>
+      <h2>Example Formula Manifest</h2>
+      <pre><code>[
+  {
+    "media-query": {
+      "max-width": 320,
+      "min-device-pixel-ratio": 1
+    },
+    "extensions": [
+      "png", "jpg"
+    ],
+    "suffix": "-320"
+  }, {
+    "media-query": {
+      "max-width": 640,
+      "min-device-pixel-ratio": 1
+    },
+    "extensions": [
+      "png", "jpg"
+    ],
+    "suffix": "-640"
+  }, {
+    "media-query": {
+      "max-width": 900,
+      "min-device-pixel-ratio": 1
+    },
+    "extensions": [
+      "png", "jpg"
+    ],
+    "suffix": "-900"
+  }, {
+    "media-query": {
+      "min-width": 900,
+      "min-device-pixel-ratio": 2
+    },
+    "extensions": [
+      "png", "jpg"
+    ],
+    "suffix": "-900"
+  }
+]</code></pre>
+      <hr/>
+      <ul class="media-list">
+        <li class="media">
+          <a href="" title="" class="pull-left">
+            <img src="images/agektmr.jpg" class="media-object profile" lazyload>
+          </a>
+          <div class="media-body">
+            <h4 class="media-heading">Eiji Kitamura</h4>
+            <p><a href="https://google.com/+agektmr">+agektmr</a>, <a href="https://twitter.com/agektmr">@agektmr</a></p>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <footer>
+      <hr/>
+    </footer>
+  </body>
+</html>
