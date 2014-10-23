@@ -16,7 +16,7 @@
     "extensions": [
       "png", "jpg"
     ],
-    "suffix": "-640"
+    "suffix": ""
   }, {
     "media-query": {
       "max-width": 900,

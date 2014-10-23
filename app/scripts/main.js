@@ -1,15 +1,6 @@
 (function() {
   var sw = null,
       viewInfo = null;
-  navigator.serviceWorker.register('scripts/worker.js', {
-    scope: location.pathname
-  }).then(function(_reg) {
-    sw = _reg;
-    console.log(sw);
-  }).catch(function(err) {
-    console.error(err);
-  });
-
   var unregister = function() {
     sw.unregsiter();
   };
@@ -38,5 +29,15 @@
         break;
     }
   });
-  postViewInfo();
+  
+  navigator.serviceWorker.register('scripts/worker.js', {
+    scope: location.pathname
+  }).then(function(_reg) {
+    sw = _reg;
+    postViewInfo();
+    console.log(sw);
+  }).catch(function(err) {
+    console.error(err);
+  });
+
 })();
