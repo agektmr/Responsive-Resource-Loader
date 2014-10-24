@@ -63,3 +63,20 @@ This will become a manifest file that looks like:
       }
     ]
 
+# How to try this
+1. clone this repository
+    git clone git@github.com:agektmr/Responsive-Resource-Loader.git
+2. install dependencies
+    cd Responsive-Resource-Loader
+    npm install
+    bower install
+3. run server
+    grunt server
+4. access on a browser at [http://localhost:9000/](http://localhost:9000/)
+
+# Inspect in DevTools
+1. access chrome://serviceworker-internals
+2. click "Inspect" of registered ServiceWorker
+3. using the device mode should help you try this easier. click on phone
+icon next to magnifier icon at top left of devtools. learn more: [DevBytes: Chrome DevTools Device Mode](https://www.youtube.com/watch?v=FrAZWiMWRa4)
+

@@ -46,17 +46,18 @@ var ResponsiveResourceLoader = (function() {
     this.suffix = '';
 
     self.addEventListener('install', function(event) {
+      console.log('install');
       fetch('/responsive-manifest.json').then(function(response) {
-        response.text().then(function(txt) {
-          console.log('response: ', txt);
-          that.manifest = JSON.parse(txt);
-        }).catch(function(err) {
-          console.error('Invalid manifest:', err.message);
-          console.info('Using default manifest instead.');
-          that.manifest = DEFAULT_MANIFEST;
-        });
-      }).catch(function(err) {
+        return response.text();
+      }, function(err) {
         console.error('Manifest couldn\'t be loaded:', err.message);
+        that.manifest = DEFAULT_MANIFEST;
+      }).then(function(txt) {
+        console.log('response: ', txt);
+        that.manifest = JSON.parse(txt);
+      }).catch(function(err) {
+        console.error('Invalid manifest:', err.message);
+        console.info('Using default manifest instead.');
         that.manifest = DEFAULT_MANIFEST;
       });
     });
@@ -144,7 +145,7 @@ console.log('fetching: ', url);
       console.log('match found', v);
       return last_match['suffix'] || '';
     }
-    return last_match['suffix'] || '';
+    return last_match && last_match['suffix'] || '';
   };
   return new rrl();
 })();
