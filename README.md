@@ -65,19 +65,19 @@ This will become a manifest file that looks like:
 
 # How to try this
 1. clone this repository
-
+```
     git clone git@github.com:agektmr/Responsive-Resource-Loader.git
-
+```
 2. install dependencies
-
+```
     cd Responsive-Resource-Loader
     npm install
     bower install
-
+```
 3. run server
-
+```
     grunt server
-
+```
 4. access on a browser at [http://localhost:9000/](http://localhost:9000/)
 
 The demo is not publicly available as ServiceWorker requires SSL connection.
