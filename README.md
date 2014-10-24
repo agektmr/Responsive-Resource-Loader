@@ -80,6 +80,8 @@ This will become a manifest file that looks like:
 
 4. access on a browser at [http://localhost:9000/](http://localhost:9000/)
 
+The demo is not publicly available as ServiceWorker requires SSL connection.
+
 # Inspect in DevTools
 1. access chrome://serviceworker-internals
 2. click "Inspect" of registered ServiceWorker
